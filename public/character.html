@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Character Conversation</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="https://elevenlabs.io/convai-widget/index.js" async></script>
+  </head>
+  <body>
+    <main class="container">
+      <header class="hero">
+        <a class="back-link" href="/">← Back to characters</a>
+        <h1 id="characterName">Character</h1>
+        <p id="characterDescription" class="subtitle"></p>
+      </header>
+
+      <section class="character-header">
+        <img id="characterImage" class="character-image-large" alt="Character portrait" />
+        <div class="character-details">
+          <p id="characterYears" class="status-text"></p>
+          <p id="characterRegion" class="status-text"></p>
+          <p id="characterTheme" class="status-text"></p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Voice Conversation</h2>
+        <div class="conversation-card">
+          <button id="startConversationBtn" class="primary-btn" type="button">Click to Start Conversation</button>
+          <p id="conversationStatus" class="status-text">Ready to begin voice chat.</p>
+          <div id="widgetMount" class="widget-mount hidden"></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Text Mode</h2>
+        <div class="conversation-card">
+          <div class="text-toolbar">
+            <button id="startTextModeBtn" class="secondary-btn" type="button">Connect Text Mode</button>
+            <button id="stopTextModeBtn" class="secondary-btn" type="button" disabled>Disconnect</button>
+          </div>
+          <p id="textModeStatus" class="status-text">Disconnected. Connect to start typing.</p>
+          <div id="chatLog" class="chat-log"></div>
+          <form id="chatForm" class="chat-form">
+            <input id="chatInput" type="text" maxlength="500" placeholder="Type your question..." />
+            <button id="sendChatBtn" class="primary-btn" type="submit" disabled>Send</button>
+          </form>
+        </div>
+      </section>
+
+      <section>
+        <h2>Historical Context</h2>
+        <ul id="factsList" class="facts"></ul>
+      </section>
+    </main>
+    <script src="/character.js" type="module"></script>
+  </body>
+</html>
+

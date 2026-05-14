@@ -1,0 +1,17 @@
+{
+  "name": "echoes-unheard-living-archive",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Living Archive demo with ElevenLabs conversational widget and token proxy.",
+  "main": "backend.js",
+  "scripts": {
+    "start": "node backend.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}
